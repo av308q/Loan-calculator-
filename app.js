@@ -13,7 +13,7 @@ function calculateResults(e){
   const totalInterest = document.getElementById('total-interest');
 
 
-
+ const principle = parseFloat(amount.value);
 
   e.preventDefault();
 }
