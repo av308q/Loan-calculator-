@@ -19,6 +19,7 @@ function calculateResults(e){
 
  // Compute monthy payment
  const x = math.pow(1+ calculateInterest, calculatedPayments);
+ const monthy = (principle*x*calculateInterest)/(x-1);
 
   e.preventDefault();
 }
