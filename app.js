@@ -21,5 +21,11 @@ function calculateResults(e){
  const x = math.pow(1+ calculateInterest, calculatedPayments);
  const monthy = (principle*x*calculateInterest)/(x-1);
 
+ if(isFinite(monthy)) {
+   monthyPayment.value = monthy.toFixed(2);
+   totalPayment.value = (monthly * calculatedPayments).toFixed;
+
+ }else {}
+
   e.preventDefault();
 }
