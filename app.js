@@ -23,9 +23,12 @@ function calculateResults(e){
 
  if(isFinite(monthy)) {
    monthyPayment.value = monthy.toFixed(2);
-   totalPayment.value = (monthly * calculatedPayments).toFixed;
+   totalPayment.value = (monthly * calculatedPayments).toFixed(2);
+   totalInterest.value = ((monthy * calculatedPayments)- principle).toFixed(2);
+  }else {
+    console.log('plaese check your numbers')
 
- }else {}
+ }
 
   e.preventDefault();
 }
