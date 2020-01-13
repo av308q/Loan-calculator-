@@ -13,20 +13,20 @@ function calculateResults(e){
   const totalInterest = document.getElementById('total-interest');
 
 
- const principle = parseFloat(amount.value);
+ const principal = parseFloat(amount.value);
  const calculateInterest = parseFloat(interest.value)/ 100 / 12;
  const calculatedPayments = parseFloat(years.value)* 12;
 
  // Compute monthy payment
  const x = math.pow(1+ calculateInterest, calculatedPayments);
- const monthy = (principle*x*calculateInterest)/(x-1);
+ const monthy = (principal*x*calculateInterest)/(x-1);
 
  if(isFinite(monthy)) {
    monthyPayment.value = monthy.toFixed(2);
    totalPayment.value = (monthly * calculatedPayments).toFixed(2);
-   totalInterest.value = ((monthy * calculatedPayments)- principle).toFixed(2);
+   totalInterest.value = ((monthy * calculatedPayments)-principal).toFixed(2);
   }else {
-    console.log('plaese check your numbers')
+    console.log('pleasse check your numbers')
 
  }
 
