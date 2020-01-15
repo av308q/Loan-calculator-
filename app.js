@@ -19,13 +19,13 @@ function calculateResults(e) {
 	const calculatedPayments = parseFloat(years.value) * 12;
 
 	// Compute monthy payment
-	const x = math.pow(1 + calculatedInterest, calculatedPayments);
-	const monthy = (principal * x * calculateInterest) / (x - 1);
+	const x = Math.pow(1 + calculatedInterest, calculatedPayments);
+	const monthy = (principal*x*calculatedInterest)/(x-1);
 
 	if (isFinite(monthy)) {
 		monthyPayment.value = monthy.toFixed(2);
 		totalPayment.value = (monthly * calculatedPayments).toFixed(2);
-		totalInterest.value = (monthy * calculatedPayments - principal).toFixed(2);
+		totalInterest.value = ((monthy * calculatedPayments) - principal).toFixed(2);
 	} else {
 		console.log('pleasse check your numbers');
 	}
