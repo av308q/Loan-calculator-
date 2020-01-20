@@ -34,12 +34,12 @@
 // }
 
 // Listen for submit
-document.getElementById('loan-form').addEventListener('submit', function(){
-	
+document.getElementById('loan-form').addEventListener('submit', function(e){
+	e.preventDefault();
 });
 
 // Calculate Results
-function calculateResults(e){
+function calculateResults(){
   console.log('Calculating...');
   // UI Vars
   const amount = document.getElementById('amount');
