@@ -35,6 +35,10 @@
 
 // Listen for submit
 document.getElementById('loan-form').addEventListener('submit', function(e){
+  // Hide results
+  document.getElementById('results').styles.display = 'none';
+  //show loader
+  document.getElementById('results').styles.display = 'none'; 
 	e.preventDefault();
 });
 
